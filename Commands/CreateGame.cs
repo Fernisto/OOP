@@ -32,6 +32,11 @@ public class CreateGame : ICommand
             Console.WriteLine("Opponent not found.");
             return;
         }
+        if (opponent == currentPlayer)
+        {
+            Console.WriteLine("You can't be your opponent.");
+            return;
+        }
 
         Console.WriteLine("Choose game type:\n1. Ranked Game\n2. Training Game");
         int gameType = int.Parse(Console.ReadLine());
