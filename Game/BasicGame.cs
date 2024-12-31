@@ -39,7 +39,8 @@ public abstract class BasicGame : IGame
             if (inputs.Length != 2 ||
                 !int.TryParse(inputs[0], out int x) ||
                 !int.TryParse(inputs[1], out int y) ||
-                !Engine.MakeMove(x, y))
+                x < 1 || x > 3 || y < 1 || y > 3 ||
+                !Engine.MakeMove(x- 1, y - 1))
             {
                 Console.WriteLine("Invalid move, try again!");
                 continue;
