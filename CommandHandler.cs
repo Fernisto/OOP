@@ -17,7 +17,7 @@ public class CommandHandler
             { "play game", new CreateGame(gameService, userService, context) },
             { "game history", new GameHistory(userService, context) },
             { "players online", new PlayersOnline(context) },
-            { "log out", new UnLo( context) },
+            { "logout", new UnLo( context) },
             { "exit", new ExitCommand() }
         };
     }
