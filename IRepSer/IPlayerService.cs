@@ -6,4 +6,5 @@ public interface IPlayerService
     void AddPlayer(User player);
     bool RegisterPlayer(User player);
     bool Login(string username, string password);
+    void GetStats(string currentplayerUsername);
 }

@@ -15,8 +15,12 @@ public class CommandHandler
             { "register", new RegisterPlayer(userService,context) },
             { "login", new LoginPlayer(userService, context) },
             { "play game", new CreateGame(gameService, userService, context) },
+            { "getstats", new GetStats( userService, context) },
+            { "pg", new CreateGame(gameService, userService, context) },
             { "game history", new GameHistory(userService, context) },
+            { "gh", new GameHistory(userService, context) },
             { "players online", new PlayersOnline(context) },
+            { "po", new PlayersOnline(context) },
             { "logout", new UnLo( context) },
             { "exit", new ExitCommand() }
         };
